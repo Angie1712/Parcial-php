@@ -20,6 +20,8 @@ if (isset($_POST['username']) && isset($_POST['pass'])) {
             $_SESSION["username"] = $username;
             header ("Location: acceso.php");
             exit();
+        }else{
+            echo "<script> window.location='index.php?valid=error'; </script>";
         }
 
       

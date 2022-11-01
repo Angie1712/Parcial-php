@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 	<head>
@@ -18,6 +19,11 @@
 			<input class="controls" type="password" name="pass" placeholder="CONTRASEÑA">
 			<!-- BOTON PARA EL ENVIO DE DATOS -->
 			<input class="buttons" type="submit" value="Enviar">
+			<?php 
+			if (isset($_GET['valid'])){
+			echo "<span style='color:red'><strong> Usuario o Contraseña invalida</strong> </span>";
+			}
+?>
 			</form>
 	</body>
 </html>
