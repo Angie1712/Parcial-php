@@ -19,12 +19,18 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['pass']) ) {
     </head>
     
     <body>
-    <h1> Bienvenido <?php echo $name ?> </h1>
-            <div class="inferior">
-                    <a href="logout.php">Cerrar sesion</a>
-                </div> 
-            <br>
-        
+    <nav class="navbar">
+     <!-- LOGO -->
+     <div class="logo">Bienvenido <?php echo $name ?></div>
+     <!-- NAVIGATION MENU -->
+     <ul class="nav-links">
+       <!-- NAVIGATION MENUS -->
+       <div class="menu">
+         <li><a href="/">Home</a></li>
+         <li><a href="logout.php">Cerrar sesion</a></li>
+       </div>
+     </ul>
+   </nav>
         <div id="contenedor">
             <div id="central">
                 <div id="login">
@@ -39,19 +45,19 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['pass']) ) {
                     <input type="email" name="e-mail" placeholder="Inserte un email" required="Por favor llene este campo">
                     <label style="color: black;">Gustos Musicales:</label>
                     <select class="select-css-1" style="width:230px" name="Musica[]" required multiple> 
-                        <option value="rock">Rock</option>
-                        <option value="pop">Pop</option>
-                        <option value="electronica">Electronica</option>
-                        <option value="jazz">Jazz</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Oop">Pop</option>
+                        <option value="Electronica">Electronica</option>
+                        <option value="Jazz">Jazz</option>
                         <option value="Tango">Tango</option>
                     </select>
                     <label style="color: black;">Actividades fisicas:</label>
                     <select class="select-css-1" style="width:230px" name="Activf[]" required multiple> 
-                        <option value="atle">Atlestismo</option>
-                        <option value="tenis">Tenis</option>
-                        <option value="futbol">Futbol</option>
-                        <option value="rugby">Rugby</option>
-                        <option value="danza">Danza aerobica</option>
+                        <option value="Atletismo">Atletismo</option>
+                        <option value="Tenis">Tenis</option>
+                        <option value="Futbol">Futbol</option>
+                        <option value="Rugby">Rugby</option>
+                        <option value="Danza">Danza aerobica</option>
                     </select>
                     <label style="color: black;">Estudios:</label>
                     <select class="select-css" style="width:150px" name="Estudios" required> 

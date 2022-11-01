@@ -19,15 +19,22 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['pass']) ) {
         <link rel="stylesheet" href="../../Assets/css/style.css">
     </head>
     
-    <body>
-            <h1> Bienvenido <?php echo $name ?> </h1>
-            <div class="inferior">
-                    <a href="logout.php">Cerrar sesion</a>
-                </div> 
-            <br>
-            <form>
-                <h3>Nombre :<?PHP echo $_POST['apellido'] ?></h3>
-                <h3>Apellid : <?PHP echo $_POST['nombre'] ?></h3>
+    <body>    
+    <nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo">Bienvenido <?php echo $name ?></div>
+    <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="logout.php">Cerrar sesion</a></li>
+        </div>
+        </ul>
+   </nav>
+            <form class="form-login">
+                <h3>Apellido :<?PHP echo $_POST['apellido'] ?></h3>
+                <h3>Nombre : <?PHP echo $_POST['nombre'] ?></h3>
                 <h3>Direccion : <?PHP echo $_POST['direccion'] ?></h3>
                 <h3>Email :<?PHP echo $_POST['e-mail'] ?></h3>
                 <br>
@@ -35,11 +42,11 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['pass']) ) {
                 <?PHP foreach ($musica as $r) :?>
                 <li><?php echo $r ?></li></h3>
                 <?php endforeach?>
+                <br>
                 <h3>Actividad Fisica :
                 <?PHP foreach ($Afisica as $r) :?>
                 <li><?php echo $r ?></li></h3>
                 <?php endforeach?>
                 <br>
                 <h3>Estudios :<?PHP echo $_POST['Estudios'] ?></h3>
-                
             </form>
