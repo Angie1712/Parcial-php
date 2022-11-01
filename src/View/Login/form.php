@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['username']) && !isset($_SESSION['pass']) ) {
-    echo "Acceso denegado";
+    echo "<script> window.location='index.php'; </script>";
     exit();
   }
   $musica = $_POST['Musica'];
