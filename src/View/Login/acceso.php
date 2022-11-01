@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['username']) && !isset($_SESSION['pass']) ) {
-    echo "Acceso denegado";
+    echo "<script> window.location='index.php'; </script>";
     exit();
   }
   $name = $_SESSION['username'];
@@ -26,7 +26,6 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['pass']) ) {
      <ul class="nav-links">
        <!-- NAVIGATION MENUS -->
        <div class="menu">
-         <li><a href="/">Home</a></li>
          <li><a href="logout.php">Cerrar sesion</a></li>
        </div>
      </ul>
