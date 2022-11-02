@@ -44,7 +44,9 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['pass']) ) {
                 <li><?php echo $r ?></li>
                 <?php endforeach?>
                 Y sus estudios son: <?PHP echo $_POST['Estudios'] ?>
-                Gracias por responder la esncuesta, sus datos serán procesador en los proximos días</p>
+                
+                <div>Gracias por responder la encuesta.</div>
+                <div> Sus datos serán procesador en los proximos días. </div> </p>
                 </form>
                 </div>
             </div>
